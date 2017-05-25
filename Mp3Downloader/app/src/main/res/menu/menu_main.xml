@@ -1,0 +1,24 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.dailysofts.mp3downloader.activities.MainActivity">
+
+    <item android:id="@+id/action_share"
+        android:title="@string/action_share"
+        android:icon="@drawable/ic_share_black_18dp"
+        android:orderInCategory="100"
+        app:showAsAction="withText" />
+
+    <item android:id="@+id/action_rating"
+        android:title="@string/action_rating"
+        android:icon="@drawable/ic_star_rate_black_18dp"
+        android:orderInCategory="200"
+        app:showAsAction="withText" />
+
+    <item android:id="@+id/action_email"
+        android:title="@string/action_email"
+        android:icon="@drawable/ic_star_rate_black_18dp"
+        android:orderInCategory="300"
+        app:showAsAction="withText" />
+
+</menu>

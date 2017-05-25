@@ -1,0 +1,50 @@
+{
+  "project_info": {
+    "project_number": "54047513129",
+    "firebase_url": "https://findmymp3-8492a.firebaseio.com",
+    "project_id": "findmymp3-8492a",
+    "storage_bucket": "findmymp3-8492a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:54047513129:android:ed166fcfa9f98dd5",
+        "android_client_info": {
+          "package_name": "com.dailysofts.findmymp3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "54047513129-jon818beub0krdadtt1p5sd5096jacdv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dailysofts.findmymp3",
+            "certificate_hash": "d2d130760bad385a73210d03b36b29c248f87b77"
+          }
+        },
+        {
+          "client_id": "54047513129-e7rp21vtgss80tdhc712vr5qbrpnr5gi.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBPYF8JB5DAtbZuKhPpRB8QilMz-UNGwUw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

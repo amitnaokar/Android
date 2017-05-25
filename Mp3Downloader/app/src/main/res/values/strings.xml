@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">Search My Mp3</string>
+    <string name="title_activity_main">MainActivity</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_share">Share</string>
+    <string name="action_rating">Rate Us</string>
+    <string name="action_email">Contact Us</string>
+
+    <string name="searchHint">Keyword</string>
+    <string name="hintError">Keyword</string>
+    <string name="searchBtnTxt">Search</string>
+
+
+    <string name="songTxt">Song</string>
+    <string name="singerTxt">Singer</string>
+    <string name="albumTxt">Album</string>
+    <string name="searchByTxt">Search By</string>
+
+    <string name="songBoldTxt"><Data><![CDATA[ <b>Song :</b> ]]> </Data> %1s</string>
+    <string name="singerBoldTxt"><Data><![CDATA[ <b>Singer :</b> ]]> </Data> %1s</string>
+    <string name="albumBoldTxt"><Data><![CDATA[ <b>Album :</b> ]]> </Data> %1s</string>
+    <string name="sizeBoldTxt"><Data><![CDATA[ <b>Size :</b> ]]> </Data> %1s</string>
+    <string name="categoryBoldTxt"><Data><![CDATA[ <b>Category :</b> ]]> </Data> %1s</string>
+    <string name="totalSongsBoldTxt"><Data><![CDATA[ <b>Total Songs :</b> ]]> </Data> %1s</string>
+
+    <string name="download128">Download 128kbps</string>
+    <string name="download320">Download 320kbps</string>
+
+    <string name="songSearchResultTitle">Song Search Result</string>
+    <string name="albumSearchResultTitle">Album Search Result</string>
+    <string name="singerSearchResultTitle">Singer Search Result</string>
+    <string name="songListTitle">Song List</string>
+    <string name="albumSongListTitle">Album Song List</string>
+    <string name="singerSongListTitle">Singer Song List</string>
+    <string name="songDownloadTitle">Download Song</string>
+
+    /*dailysofts@gmail.com*/
+    <string name="startAppId">204473920</string>
+    <!-- AdMob ad unit IDs -->
+    <string name="admob_banner_main_footer">ca-app-pub-1461502190828874/3393945143</string>
+    <string name="admob_banner_download_header">ca-app-pub-1461502190828874/6347411545</string>
+
+
+</resources>

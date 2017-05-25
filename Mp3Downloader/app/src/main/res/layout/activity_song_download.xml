@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto">
+
+    <include android:id="@+id/app_bar" layout="@layout/app_bar"></include>
+
+    <com.google.android.gms.ads.AdView
+        android:layout_below="@+id/app_bar"
+        android:id="@+id/adMobHeaderBanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/admob_banner_download_header"/>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefreshLayout"
+        android:layout_below="@+id/adMobHeaderBanner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/songDetailsLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:weightSum="2">
+
+            <!--<ImageView
+                android:id="@+id/songImage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="0.5"
+                android:src="@drawable/default_song_image"
+                android:scaleType="fitEnd"
+                android:layout_gravity="center"/>-->
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:layout_margin="20dp"
+                android:gravity="center|top">
+                <TextView
+                    android:id="@+id/songName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""/>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/songSizeText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""/>
+                    <LinearLayout
+                        android:layout_toRightOf="@+id/songSizeText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/songSizeHigh"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=""/>
+                        <TextView
+                            android:id="@+id/songSizeNormal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text=""/>
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/singerName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text=""/>
+                <TextView
+                    android:id="@+id/albumName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:text=""/>
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/rounded_btn_bckg">
+                    <Button
+                        android:id="@+id/downloadNormalQuality"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/download128"
+                        android:textAllCaps="true"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
+                        android:clickable="true"
+                        android:textColor="@color/accentColor"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:background="@drawable/btn_custom_bckg"
+                        style="@style/Widget.AppCompat.Button.Borderless.Colored"/>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:background="@drawable/rounded_btn_bckg">
+                    <Button
+                        android:id="@+id/downloadHighQuality"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/download320"
+                        android:textAllCaps="true"
+                        android:paddingLeft="16dp"
+                        android:paddingRight="16dp"
+                        android:clickable="true"
+                        android:textColor="@color/accentColor"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:background="@drawable/btn_custom_bckg"
+                        style="@style/Widget.AppCompat.Button.Borderless.Colored"/>
+                </FrameLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@android:style/Widget.DeviceDefault.Light.ProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone">
+    </ProgressBar>
+
+    <com.startapp.android.publish.ads.banner.Banner
+        android:id="@+id/startAppBanner"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"/>
+
+</RelativeLayout>

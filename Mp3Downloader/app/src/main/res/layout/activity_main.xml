@@ -1,0 +1,114 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto">
+
+    <include android:id="@+id/app_bar" layout="@layout/app_bar"></include>
+
+    <com.startapp.android.publish.ads.banner.Banner
+        android:layout_below="@+id/app_bar"
+        android:id="@+id/startAppBannerHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"/>
+
+    <LinearLayout
+        android:id="@+id/mainContent"
+        android:layout_below="@+id/startAppBannerHeader"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:weightSum=  "3"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/query"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="fill_vertical"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_weight="0.5"
+            android:layout_marginTop="10dp">
+
+            <EditText
+                android:id="@+id/queryString"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/searchHint"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:inputType="text" />
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/searchByTxt"/>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp">
+
+            <RadioButton
+                android:id="@+id/songRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:onClick="radioButtonClicked"
+                android:text="@string/songTxt" />
+
+            <RadioButton
+                android:id="@+id/singerRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:onClick="radioButtonClicked"
+                android:text="@string/singerTxt" />
+
+            <RadioButton
+                android:id="@+id/albumRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="false"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:onClick="radioButtonClicked"
+                android:text="@string/albumTxt" />
+
+        </RadioGroup>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@drawable/rounded_btn_bckg">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/searchBtnTxt"
+                android:textAllCaps="true"
+                android:paddingLeft="16dp"
+                android:paddingRight="16dp"
+                android:clickable="true"
+                android:textColor="@color/accentColor"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:background="@drawable/btn_custom_bckg"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:onClick="searchClicked"/>
+        </FrameLayout>
+
+    </LinearLayout>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adMobFooterBanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/admob_banner_main_footer"/>
+
+</RelativeLayout>
